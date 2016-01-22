@@ -1,0 +1,20 @@
+{
+  "name": "function-apply",
+  "description": "Function arguments as an object",
+  "keywords": "function, object, apply",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acvos/function-apply.git"
+  },
+  "author": "Anthony Chernikov <achernikov@acvos>",
+  "dependencies": {
+    "curry": "^1.2.0",
+    "poly-map": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=4.0",
+    "npm": ">=2.0"
+  },
+  "license": "Apache-2.0"
+}
