@@ -2,7 +2,7 @@
   "name": "function-apply",
   "description": "Function arguments as an object",
   "keywords": "function, object, apply",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/acvos/function-apply.git"
