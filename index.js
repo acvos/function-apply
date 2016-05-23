@@ -1,4 +1,3 @@
-var curry = require("curry")
 var map = require("poly-map")
 
 var getFrom = function (object) {
@@ -31,4 +30,14 @@ function apply(func, params) {
     return result;
 }
 
-module.exports = curry(apply);
+function createApplicator(func, params) {
+    if (params === undefined) {
+        return function (params) {
+          return apply(func, params);
+        };
+    } else {
+        return apply(func, params);
+    }
+}
+
+module.exports = createApplicator;
