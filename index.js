@@ -1,5 +1,9 @@
 var map = require("poly-map")
 
+function isScalar(data) {
+  return (/string|number|boolean/).test(typeof data);
+}
+
 var getFrom = function (object) {
     return function (property) {
         return object[property];
@@ -17,6 +21,8 @@ function argumentNames(func) {
 function bindArguments(names, values) {
     if (values instanceof Array) {
         return values;
+    } else if (isScalar(values) && names.length === 1) {
+        return [values];
     } else {
         return map(getFrom(values), names);
     }
